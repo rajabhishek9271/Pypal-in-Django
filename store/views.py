@@ -39,4 +39,4 @@ class Checkout(View):
 
         context = {'items':items, 'order':order}
 
-        return render(request, 'store/checkout.html')
+        return render(request, 'store/checkout.html', context)

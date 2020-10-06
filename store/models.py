@@ -65,6 +65,9 @@ class OrderItem(models.Model):
         total = self.product.price * self.quantity
         return total
 
+    def __str__(self):
+        return f"{self.product.name} -{self.quantity}"
+
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
