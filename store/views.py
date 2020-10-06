@@ -45,5 +45,7 @@ class Checkout(View):
 
 class UpdateItem(View):
 
-    def get(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
+        # code to add order item
+
         return JsonResponse("Item was added", safe=False)

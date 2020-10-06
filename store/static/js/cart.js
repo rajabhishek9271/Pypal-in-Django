@@ -23,7 +23,7 @@ function updateUserOrder(productId, action){
   var url = '/update_item/'
 
   fetch(url, {
-    method:POST,
+    method:'POST',
     headers:{
         'Content-Type':'application/json',
         'X-CSRFToken':csrftoken,
@@ -32,10 +32,10 @@ function updateUserOrder(productId, action){
   })
 
   .then((response) =>{
-    return response.json()
+    return response.json();
   })
 
   .then((data) =>{
-    console.Log('data:', data)
+    console.log('data:', data)
   })
 }
